@@ -9,5 +9,21 @@
     <a href="https://docs.google.com/presentation/d/1CIuH5RK_Y3I_IOX9J7idA8DHvBLjlbEzaNEruj9CtxA/edit?usp=sharing">Google Slides: D1-Cinematic</a>
 </body>
 <script src="src/phaser.js"></script>
+<script>
+    class Intro extends Phaser.Scene {
+        constructor() {
+            super('intro');
+        }
 
+        preload() {
+            this.load.image('background', 'assets/background.png');
+            this.load.image('loading_1', 'assets/loading_1.png');
+        }
+
+        create() {
+            this.add.image(800, 600, 'background');
+            this.add.image(200, 150, 'loading_1');
+        }
+    }
+</script>
 </html>
